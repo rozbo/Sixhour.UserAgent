@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>SixHour.UserAgent</AssemblyName>
+        <RootNamespace>SixHour.UserAgent</RootNamespace>
+        <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+    </PropertyGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\**\*.*" />
+        <Content Remove="Resources\**\*.*" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Core" Version="7.0.0" />
+        <PackageReference Include="Volo.Abp.VirtualFileSystem" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="$(MicrosoftPackageVersion)" />
+    </ItemGroup>
+</Project>
